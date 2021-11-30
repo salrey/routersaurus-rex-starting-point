@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+img {
+  height: 100px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  font-family: var(--font-zen);
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+ul li a {
+  color: var(--white);
+  border-bottom: 2px solid var(--white);
+  font-weight: 500;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+header {
+  align-items: center;
+  background: var(--black);
+  border-bottom: 3px solid var(--white);
+  display: flex;
+  padding: 25px 15% 35px;
+  margin-bottom: 50px;
+}
