@@ -1,7 +1,7 @@
 import { Component } from "react";
-// import Dinosaurs from "./components/Dinosaurs";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Dinosaurs from "./components/Dinosaurs"
 import Herbivores from "./components/Herbivores";
 import Carnivores from "./components/Carnivores";
 
@@ -47,11 +47,23 @@ class App extends Component {
             </li>
           </ul>
         </header>
-        {/* <Dinosaurs /> */}
-        {herbivoresShown ? <Herbivores /> : null}
-        {carnivoresShown && <Carnivores />}
+        {/* Modern way of using React Networking/react-router */}
+        {/* NO longer need constructor */}
+        <Routes >
+          <Route exact path="/" element={<Dinosaurs />} />
+          <Route path="/herbivores" element={<Herbivores />} />
+          <Route path="/carnivores" element={<Carnivores />} />
+        </Routes>
+        {/* Old way of using React Networking/react-router */}
+        {/* <Route path="/herbivores" component={<Herbivores />} /> */}
 
-        {/* {conditionals use case} */}
+
+        {/* Manual Conditional Rendering */}
+        {/* {herbivoresShown ? <Herbivores /> : null}
+        {carnivoresShown && <Carnivores />} */}
+
+
+        {/* {conditional rendering use case} */}
         {/* {this.state.loggedIn ? <Profile /> : <SignUp />} */}
       </div>
     );
